@@ -32,7 +32,7 @@ When a package doesn't yet have vitest set up:
 
    **Do not add the package to the root `projects` list if its tests depend on dev-infra** (postgres + redis docker stack). The workspace-level runner does not start dev-infra, so those tests would fail when invoked from the root. This is why `packages/bsky` is intentionally omitted from the root config — it must be run from its own directory via `pnpm test`, which goes through [packages/dev-infra/with-test-redis-and-db.sh](../../../../packages/dev-infra/with-test-redis-and-db.sh). See the comment in [vitest.config.ts](../../../../vitest.config.ts) for context.
 
-4. Create `tsconfig.test.json` extending the shared vitest config. Always extend `../../tsconfig/vitest.tsconfig.json` (the jest-typed `../../tsconfig/tests.json` pulls in `@types/jest` and is for jest packages only):
+4. Create `tsconfig.test.json` extending the shared vitest config. Always extend `../../tsconfig/vitest.tsconfig.json` (the jest-typed `../../tsconfig/jest.tsconfig.json` pulls in `@types/jest` and is for jest packages only):
 
    ```json
    {

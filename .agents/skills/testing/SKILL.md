@@ -54,7 +54,7 @@ Each package splits its TS config into three files referenced from the root `tsc
 ```
 
 - `tsconfig.build.json` — production code in `./src`, excludes `**/*.test.ts`, emits to `./dist`.
-- `tsconfig.test.json` — test code. For vitest packages it extends `../../tsconfig/vitest.tsconfig.json`; for jest packages it extends `../../tsconfig/tests.json` (which adds `"types": ["node", "jest"]`). The `include` list typically covers both `./tests` and `./src/**/*.test.ts`.
+- `tsconfig.test.json` — test code. For vitest packages it extends `../../tsconfig/vitest.tsconfig.json`; for jest packages it extends `../../tsconfig/jest.tsconfig.json` (which adds `"types": ["node", "jest"]`). The `include` list typically covers both `./tests` and `./src/**/*.test.ts`.
 
 When adding tests to a package that doesn't already have a `tsconfig.test.json`, create one before writing tests. See the runner-specific reference for the exact contents.
 
