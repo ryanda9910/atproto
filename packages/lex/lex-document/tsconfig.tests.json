@@ -5,4 +5,9 @@
     "noImplicitAny": true,
     "rootDir": "./",
   },
+  "references": [
+    { "path": "../lex-data/tsconfig.build.json" },
+    { "path": "../lex-schema/tsconfig.build.json" },
+    { "path": "./tsconfig.build.json" },
+  ],
 }

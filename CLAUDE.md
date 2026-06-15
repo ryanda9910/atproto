@@ -22,7 +22,6 @@ Whole-repo verification commands (from root):
 
 ```bash
 pnpm verify         # parallel: style + lint + types
-pnpm verify:types   # tsc --build tsconfig.json (project references)
 pnpm build --force  # recursive, topo-sorted build
 pnpm codegen        # recursive codegen across packages that define one
 ```

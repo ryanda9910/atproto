@@ -1,8 +1,12 @@
 {
-  "extends": "../../../tsconfig/node.json",
+  "extends": "../../../tsconfig/node-exec.json",
   "compilerOptions": {
+    "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
   },
   "include": ["./src"],
+  "references": [
+    { "path": "../simple-store/tsconfig.build.json" },
+  ],
 }

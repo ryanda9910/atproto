@@ -1,8 +1,12 @@
 {
   "extends": "../../tsconfig/isomorphic.json",
   "compilerOptions": {
+    "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
   },
   "include": ["./src"],
+  "references": [
+    { "path": "../lexicon/tsconfig.build.json" },
+  ],
 }

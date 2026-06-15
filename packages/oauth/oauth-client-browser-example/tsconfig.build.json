@@ -10,4 +10,5 @@
     "outDir": "./dist",
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "references": [{ "path": "../oauth-client-browser/tsconfig.build.json" }],
 }

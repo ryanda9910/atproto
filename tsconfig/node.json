@@ -2,7 +2,11 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
   "compilerOptions": {
-    "lib": ["ES2023", "ScriptHost"],
     "types": ["node"],
+    // We currently target Node 22
+    // https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
+    "lib": ["ES2023"],
+    "module": "nodenext",
+    "target": "ES2023",
   },
 }

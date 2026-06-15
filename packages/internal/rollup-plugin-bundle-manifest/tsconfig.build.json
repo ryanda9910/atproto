@@ -1,6 +1,7 @@
 {
   "extends": ["../../../tsconfig/node.json"],
   "compilerOptions": {
+    "composite": true,
     "outDir": "dist",
     "rootDir": "src",
   },

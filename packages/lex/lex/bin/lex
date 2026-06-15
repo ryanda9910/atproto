@@ -9,8 +9,6 @@
 
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
-import { build } from '@atproto/lex-builder'
-import { install } from '@atproto/lex-installer'
 
 yargs(hideBin(process.argv))
   .strict()
@@ -108,6 +106,7 @@ yargs(hideBin(process.argv))
       })
     },
     async (argv) => {
+      const { build } = await import('@atproto/lex-builder')
       await build(argv)
     },
   )
@@ -149,6 +148,7 @@ yargs(hideBin(process.argv))
       })
     },
     async (argv) => {
+      const { install } = await import('@atproto/lex-installer')
       await install({
         add: argv.nsid,
         save: argv.save,

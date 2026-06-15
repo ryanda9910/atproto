@@ -6,4 +6,4 @@
 // the monorepo is being setup (during initial "pnpm install"), but was never
 // built.
 
-import './dist/index.js'
+import '@atproto/lex-cli'

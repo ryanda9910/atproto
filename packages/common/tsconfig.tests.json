@@ -4,4 +4,10 @@
     "rootDir": ".",
   },
   "include": ["./tests"],
+  "references": [
+    { "path": "../common-web/tsconfig.build.json" },
+    { "path": "../lex/lex-cbor/tsconfig.build.json" },
+    { "path": "../lex/lex-data/tsconfig.build.json" },
+    { "path": "./tsconfig.build.json" },
+  ],
 }

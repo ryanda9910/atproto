@@ -4,6 +4,7 @@
   "compilerOptions": {
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
+    "allowImportingTsExtensions": true,
     "ignoreDeprecations": "6.0",
     "skipLibCheck": true,
     "noEmit": true,
