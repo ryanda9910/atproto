@@ -1,5 +1,5 @@
 {
-  "extends": ["../../tsconfig/isomorphic-exec.json"],
+  "extends": ["../../tsconfig/isomorphic-exec.tsconfig.json"],
   "include": ["./src"],
   "exclude": ["**/*.test.ts"],
   "compilerOptions": {

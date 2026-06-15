@@ -40,7 +40,7 @@ pnpm exec prettier --write <path>            # format specific files only
 pnpm exec eslint --fix <path>                # lint specific files only
 ```
 
-Every package now ships a `tsconfig.build.json` (composite, with explicit `references` to its workspace deps) and a `tsconfig.tests.json` for the test sources. The root `tsconfig.json` is a project-graph aggregator only.
+Every package now ships a `tsconfig.build.json` (composite, with explicit `references` to its workspace deps) and a `tsconfig.test.json` for the test sources. The root `tsconfig.json` is a project-graph aggregator only.
 
 Avoid `pnpm run style:fix` (whole-repo prettier) unless the user explicitly asks for a repo-wide formatting pass.
 
@@ -68,7 +68,7 @@ For everything else lexicon-related — `lex install` / `lex build`, the per-pac
 
 - Node ≥22 runtime floor; build/dev default to Node 26 (`.nvmrc`). ESM only (`"type": "module"` in every package). Use `node --enable-source-maps` for production-style runs.
 - TypeScript compilation uses `tsgo` (TS7, `@typescript/native-preview`), not `tsc`. There is no per-package `typescript` devDependency — `tsgo` is hoisted at the root.
-- Packages on the codegen critical path (transitive deps of `@atproto/lex` / `@atproto/lex-cli`) extend `tsconfig/node-exec.json` or `tsconfig/isomorphic-exec.json`, which enable `rewriteRelativeImportExtensions`, `erasableSyntaxOnly`, and `verbatimModuleSyntax`. Within those packages: imports must use explicit `.ts` extensions, `import type` is mandatory for type-only imports, and erasable-only syntax (no enums, namespaces, or parameter properties).
+- Packages on the codegen critical path (transitive deps of `@atproto/lex` / `@atproto/lex-cli`) extend `tsconfig/node-exec.tsconfig.json` or `tsconfig/isomorphic-exec.tsconfig.json`, which enable `rewriteRelativeImportExtensions`, `erasableSyntaxOnly`, and `verbatimModuleSyntax`. Within those packages: imports must use explicit `.ts` extensions, `import type` is mandatory for type-only imports, and erasable-only syntax (no enums, namespaces, or parameter properties).
 - Import paths use workspace protocol (`workspace:^`). Don't pin internal packages to a published version.
 - Don't refactor unrelated code; this project's contribution guidelines explicitly discourage large refactors and unsolicited tooling changes (see [README.md](README.md) "Contributions").
 - Don't add new dependencies without strong justification.

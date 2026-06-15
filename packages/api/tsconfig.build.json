@@ -1,9 +1,10 @@
 {
-  "extends": "../../tsconfig/isomorphic.json",
+  "extends": "../../tsconfig/isomorphic.tsconfig.json",
   "compilerOptions": {
     "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
+    // Needed because of lex-cli
     "noUnusedLocals": false,
   },
   "include": ["./src"],

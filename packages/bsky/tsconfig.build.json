@@ -1,9 +1,10 @@
 {
-  "extends": "../../tsconfig/node.json",
+  "extends": "../../tsconfig/node.tsconfig.json",
   "compilerOptions": {
     "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
+    // Needed because of lex-cli
     "noUnusedLocals": false,
   },
   "include": ["./src"],

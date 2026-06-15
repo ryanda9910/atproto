@@ -1,5 +1,5 @@
 {
-  "extends": ["../../../tsconfig/expo.json"],
+  "extends": ["../../../tsconfig/expo.tsconfig.json"],
   "compilerOptions": {
     "composite": true,
     "rootDir": "./src",
