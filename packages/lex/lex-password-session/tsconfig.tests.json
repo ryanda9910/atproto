@@ -6,7 +6,6 @@
     "rootDir": "./",
   },
   "references": [
-    { "path": "../lex-builder/tsconfig.build.json" },
     { "path": "../lex-client/tsconfig.build.json" },
     { "path": "../lex-schema/tsconfig.build.json" },
     { "path": "../lex-server/tsconfig.build.json" },

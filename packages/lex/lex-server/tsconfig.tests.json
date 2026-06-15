@@ -5,16 +5,5 @@
     "noImplicitAny": true,
     "rootDir": "./",
   },
-  "references": [
-    { "path": "../../crypto/tsconfig.build.json" },
-    { "path": "../../did/tsconfig.build.json" },
-    { "path": "../../internal/did-resolver/tsconfig.build.json" },
-    { "path": "../lex-cbor/tsconfig.build.json" },
-    { "path": "../lex-client/tsconfig.build.json" },
-    { "path": "../lex-data/tsconfig.build.json" },
-    { "path": "../lex-json/tsconfig.build.json" },
-    { "path": "../lex-schema/tsconfig.build.json" },
-    { "path": "../lex/tsconfig.build.json" },
-    { "path": "./tsconfig.build.json" },
-  ],
+  "references": [{ "path": "./tsconfig.build.json" }],
 }

@@ -5,9 +5,5 @@
     "noImplicitAny": true,
     "rootDir": "./",
   },
-  "references": [
-    { "path": "../../syntax/tsconfig.build.json" },
-    { "path": "../lex-data/tsconfig.build.json" },
-    { "path": "./tsconfig.build.json" },
-  ],
+  "references": [{ "path": "./tsconfig.build.json" }],
 }
