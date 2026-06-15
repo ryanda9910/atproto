@@ -6,7 +6,5 @@
     "rootDir": "src",
   },
   "include": ["src"],
-  "references": [
-    { "path": "../jwk/tsconfig.build.json" },
-  ],
+  "references": [{ "path": "../jwk/tsconfig.build.json" }],
 }

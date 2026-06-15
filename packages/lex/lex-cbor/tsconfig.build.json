@@ -7,7 +7,5 @@
     "rootDir": "./src",
     "outDir": "./dist",
   },
-  "references": [
-    { "path": "../lex-data/tsconfig.build.json" },
-  ],
+  "references": [{ "path": "../lex-data/tsconfig.build.json" }],
 }
