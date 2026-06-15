@@ -3,7 +3,6 @@
   "extends": "./isomorphic.tsconfig.json",
   "compilerOptions": {
     "noImplicitAny": true,
-    "importHelpers": true,
     "rewriteRelativeImportExtensions": true,
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
